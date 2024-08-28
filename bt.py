@@ -8,7 +8,6 @@ import string
 ser = serial.Serial("/dev/rfcomm0",9600,timeout=1)
 ser.reset_input_buffer()
 ser.write(str.encode('Start\r\n'))
-print("Test")
 
 while True:
 	#if ser.in_waiting>0:
