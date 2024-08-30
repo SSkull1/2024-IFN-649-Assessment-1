@@ -1,3 +1,5 @@
+import paho.mqtt.publish as publish
+publish.single("ifn649", "Hello World", hostname="3.106.232.128")
 #!/usr/bin/env python3
 import serial
 import time
@@ -12,3 +14,4 @@ if __name__ == '__main__':
         time.sleep(5)
         ser.write(str.encode('LED_OFF\r\n'))
         time.sleep(5)
+print("Done")
