@@ -10,10 +10,6 @@ void setup() {
 }
 
 void loop() {
- //digitalWrite(LED_BUILTIN,HIGH);
-  //delay(6000);
-   //digitalWrite(LED_BUILTIN,LOW);
-   // delay(6000);
   //Process commands from bluetooth first
   if(Serial1.available()>0){
     String str =Serial1.readString().trim();
@@ -21,12 +17,10 @@ void loop() {
     if(str=="LED_ON"){
       digitalWrite(LED_BUILTIN,HIGH);
       Serial.println("IN LED ON");
-      //delay(8000);
-    } else if(str=="LED_OFF"){
+         } else if(str=="LED_OFF"){
       digitalWrite(LED_BUILTIN,LOW);
       Serial.println("IN LED OFF");
-      //delay(6000);
-    }
+          }
   }
 }
     
